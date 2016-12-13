@@ -8,6 +8,20 @@ package com.iescomercio.tema4.arrays;
 public class Main {
     public static void main(String[] args) {
         Arrays a = new Arrays();
-        a.ejercicio1();
+        
+        //a.ejercicio1();
+        
+        //a.ejercicio2();
+        
+        //a.ejercicio2DoWhile();
+        
+        //a.ejercicio3(3);
+        
+        //a.ejercicio4(6);
+        
+        //a.ejercicioCuentaAtras(10);
+        
+        a.ejercicioImpares(9);
+        
     }
 }   
