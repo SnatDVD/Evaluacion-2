@@ -17,11 +17,15 @@ public class Main {
         
         //a.ejercicio3(3);
         
-        //a.ejercicio4(6);
+        //a.ejercicio4(16);
         
         //a.ejercicioCuentaAtras(10);
         
-        a.ejercicioImpares(9);
+        //a.ejercicioImpares(9);
+        
+        //a.ejercicioScanner2();
+        
+        a.ejercicioScannerMultiplicacion();
         
     }
 }   

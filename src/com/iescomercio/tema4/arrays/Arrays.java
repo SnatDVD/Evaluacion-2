@@ -1,5 +1,7 @@
 package com.iescomercio.tema4.arrays;
 
+import java.util.Scanner;
+
 public class Arrays {
 
     public void ejercicio1() {
@@ -89,6 +91,78 @@ public class Arrays {
                 System.out.println("");
             }
         }
+    }
+    
+    public void ejercicioScanner(){
+        Scanner sc = new Scanner(System.in);
+        int e,b,resultado;
+        do{
+            resultado = 1;
+            System.out.println("Introduce dos números.");
+            b = sc.nextInt();
+            e = sc.nextInt();
+            if (b!=0 || e != 0){
+                for(int i=0; i<e; i++){
+                    resultado = resultado*b;
+                }
+                System.out.println("Resultado: " + resultado);
+            }
+        } while (e!=0 || b!=0);
+    }
+    
+    public void ejercicioScanner2(){
+        Scanner s = new Scanner(System.in);
+        int e,b,resultado;
+        String aux;
+        do{
+            resultado = 1;
+            System.out.println("Introduce dos números sepradaos por comas.");
+            aux = s.nextLine();
+            Scanner sc = new Scanner(aux).useDelimiter(",");
+            b = sc.nextInt();
+            e = sc.nextInt();
+            if (b!=0 || e != 0){
+                for(int i=0; i<e; i++){
+                    resultado = resultado*b;
+                }
+                System.out.println("Resultado = " + resultado);
+            }
+        } while (e!=0 || b!=0);
+        System.out.println("FIN");
+    }
+    
+    public void ejercicioScannerMultiplicacion(){
+        Scanner sc = new Scanner(System.in);
+        int a,b,cont = 0,resultado;
+        do{
+            resultado = 0;
+            System.out.print("Intoduce el valor de a: ");
+            a = sc.nextInt();
+            System.out.print("Intoduce el valor de b: ");
+            b = sc.nextInt();
+            if(a!=0 || b!=0){
+                do {
+                    resultado = resultado + a;
+                    cont++;
+                } while (cont < b);
+                System.out.println("Resultado: " + resultado);
+            }
+        } while(a!=0 || b!=0);
+        System.out.println("FIN");
+    }
+    
+    private void muestraCaracter(int n, char c){
+        for (int a = 0; a < n; a++){
+            System.out.print(c);
+        }
+    }
+    
+    public void rombo(int tam){
+        for (int fila = 1; fila <= tam; fila++){
+            
+        }
+        
+        
     }
     
     
