@@ -25,7 +25,12 @@ public class Main {
         
         //a.ejercicioScanner2();
         
-        a.ejercicioScannerMultiplicacion();
+        //a.ejercicioScannerMultiplicacion();
         
+        //a.diezNumeros();
+        
+        //a.rombo(13);
+        
+        a.ejercicioDavid();
     }
 }   
