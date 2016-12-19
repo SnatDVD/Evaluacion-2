@@ -4,6 +4,55 @@ import java.util.Scanner;
 
 public class Arrays {
 
+    /*
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    METODOS PRIVATE
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    */
+    
+    private void muestraCaracter(int n, char c) {
+        for (int a = 0; a < n; a++) {
+            System.out.print(c);
+        }
+    }
+    
+    private int sumatorioVector(int[] vector) {
+        int tam = vector.length;
+        int acum = 0;
+        for (int c = 0; c < tam; c++) {
+            acum = acum + vector[c];
+        }
+        return acum;
+    }
+
+    private void rellenaVectorInt(int[] vector) {
+        int tam = vector.length;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduzca " + tam + " números enteros.");
+        for (int c = 0; c < tam; c++) {
+            System.out.println("Número " + (c + 1));
+            vector[c] = sc.nextInt();
+        }
+    }
+
+    private void rellenaArrayAleatorio(int[] array, int min, int max) {
+        for (int c = 0; c < array.length; c++) {
+            array[c] = (int) (Math.random() * (max + 1) + min);
+        }
+    }
+    
+    private void muestraArrayInt(int[] vector){
+        for(int c = 0; c < vector.length; c++){
+            System.out.println("Posición: " + c + ": " + vector[c]);
+        }
+    }
+    
+    /*
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    METODOS PUBLIC
+    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+    */
+
     public void ejercicio1() {
         for (int i = 1; i < 11; i++) {
             System.out.println("5 x " + i + " = " + (i * 5));
@@ -151,12 +200,6 @@ public class Arrays {
         System.out.println("FIN");
     }
 
-    private void muestraCaracter(int n, char c) {
-        for (int a = 0; a < n; a++) {
-            System.out.print(c);
-        }
-    }
-
     public void rombo(int tam) {
         if (tam % 2 == 1) {
             int fila = 1;
@@ -226,8 +269,8 @@ public class Arrays {
         } while (nums[9] == 0);
 
     }
-    */
-
+     */
+    
     public void ejercicioDavid() {
         int aux;
         int[] nums1 = new int[10];
@@ -237,77 +280,65 @@ public class Arrays {
         System.out.println("Rellenar vector 2");
         rellenaVectorInt(nums2);
         System.out.println("Suma vector 1: " + sumatorioVector(nums1));
-        System.out.println("Media del vector 2: " + (sumatorioVector(nums1)/nums2.length));
-        for(int c = 0; c < 10; c++) {
+        System.out.println("Media del vector 2: " + (sumatorioVector(nums1) / nums2.length));
+        for (int c = 0; c < 10; c++) {
             aux = nums1[c] + nums2[c];
             System.out.println("Suma de la posicion " + c + ": " + aux);
         }
     }
 
-    private void rellenaVectorInt(int[] vector){
-        int tam = vector.length;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Introduzca " + tam + " números enteros.");
-        for(int c = 0; c < tam; c++){
-            System.out.println("Número " + (c+1));
-            vector[c] = sc.nextInt();
-        }
-    }
-    
-    private int sumatorioVector(int[] vector){
-        int tam = vector.length;
-        int acum = 0;
-        for (int c = 0; c < tam; c++){
-            acum = acum + vector[c];
-        }
-        return acum;
-    }
-    
-    public void ejercicio21(){
+    public void ejercicio21() {
         int[] vector = new int[5];
         int tam = vector.length - 1;
         rellenaVectorInt(vector);
-        for (int c = tam; c >= 0; c--){
+        for (int c = tam; c >= 0; c--) {
             System.out.println("Numero de la posicion " + c + ": " + vector[c]);
         }
     }
-    
-    public void ejercicio22(){
+
+    public void ejercicio22() {
         int[] vector = new int[10];
         rellenaVectorInt(vector);
         int aux = 0;
-        while (aux < 5){
+        while (aux < 5) {
             System.out.println("Numero: " + vector[aux]);
             aux++;
-            System.out.println("Numero: " + vector[vector.length-aux]);
+            System.out.println("Numero: " + vector[vector.length - aux]);
         }
     }
-    
-    public void ejercicio23(){
+
+    public void ejercicio23() {
         int[] vector = new int[5];
         rellenaVectorInt(vector);
         int acum1 = 0, acum2 = 0, contCeros = 0;
         int contPos = 0, contNeg = 0;
-        for(int c = 0; c < vector.length; c++){
-            if(vector[c] > 0){
+        for (int c = 0; c < vector.length; c++) {
+            if (vector[c] > 0) {
                 acum1 = acum1 + vector[c];
                 contPos++;
-            } else if (vector[c] < 0){
+            } else if (vector[c] < 0) {
                 acum2 = acum2 + vector[c];
                 contNeg++;
             } else {
                 contCeros++;
             }
         }
-        System.out.println("Media positivos: " + (float)(acum1/contPos));
-        System.out.println("Media negativos: " + (float)(acum2/contNeg));
+        System.out.println("Media positivos: " + (float) (acum1 / contPos));
+        System.out.println("Media negativos: " + (float) (acum2 / contNeg));
         System.out.println("Numero de ceros: " + contCeros);
     }
-    
-    private void rellenaArrayAleatorio(int[] array, int min, int max){
-        
-        for(int c = 0;)
-        
+
+    public void ejercicio24() {
+        int[] vector1 = new int[10];
+        int[] vector2 = new int[10];
+        rellenaArrayAleatorio(vector1, 1, 25);
+        rellenaArrayAleatorio(vector2, 1, 25);
+        muestraArrayInt(vector1);
+        muestraArrayInt(vector2);
+        for(int c = 0; c < vector1.length; c++){
+            System.out.println("Array 1 Posicion " + c + ": " + vector1[c]);
+            System.out.println("Array 2 Posicion " + c + ": " + vector2[c]);
+        }
     }
-    
+
 }
