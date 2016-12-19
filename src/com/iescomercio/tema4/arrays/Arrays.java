@@ -215,6 +215,7 @@ public class Arrays {
         }
     }
 
+    /*
     public void diezNumerosDeGolpe() {
         Scanner sc = new Scanner(System.in);
         int[] nums = new int[10];
@@ -225,37 +226,88 @@ public class Arrays {
         } while (nums[9] == 0);
 
     }
+    */
 
     public void ejercicioDavid() {
-        Scanner sc = new Scanner(System.in);
-        int acum = 0, aux, aux2;
-        float media;
+        int aux;
         int[] nums1 = new int[10];
         int[] nums2 = new int[10];
-        
-        System.out.println("Introduce 10 numeros :");
-        for (int c = 0; c < 10; c++) {
-            nums1[c] = sc.nextInt();
-        }
-        System.out.println("Introduce 10 numeros :");
-        for (int c = 0; c < 10; c++) {
-            nums2[c] = sc.nextInt();
-        }
-        for(int c = 0; c < 10; c++) {
-            acum = acum + nums1[c];
-        }
-        System.out.println("Suma total del vector 1: " + acum);
-        acum = 0;
-        for(int c = 0; c < 10; c++) {
-            acum = acum + nums2[c];
-        }
-        media = (float)(acum/10);
-        System.out.println("Media del vector 2: " + media);
-        
+        System.out.println("Rellenar vector 1");
+        rellenaVectorInt(nums1);
+        System.out.println("Rellenar vector 2");
+        rellenaVectorInt(nums2);
+        System.out.println("Suma vector 1: " + sumatorioVector(nums1));
+        System.out.println("Media del vector 2: " + (sumatorioVector(nums1)/nums2.length));
         for(int c = 0; c < 10; c++) {
             aux = nums1[c] + nums2[c];
             System.out.println("Suma de la posicion " + c + ": " + aux);
         }
     }
 
+    private void rellenaVectorInt(int[] vector){
+        int tam = vector.length;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduzca " + tam + " números enteros.");
+        for(int c = 0; c < tam; c++){
+            System.out.println("Número " + (c+1));
+            vector[c] = sc.nextInt();
+        }
+    }
+    
+    private int sumatorioVector(int[] vector){
+        int tam = vector.length;
+        int acum = 0;
+        for (int c = 0; c < tam; c++){
+            acum = acum + vector[c];
+        }
+        return acum;
+    }
+    
+    public void ejercicio21(){
+        int[] vector = new int[5];
+        int tam = vector.length - 1;
+        rellenaVectorInt(vector);
+        for (int c = tam; c >= 0; c--){
+            System.out.println("Numero de la posicion " + c + ": " + vector[c]);
+        }
+    }
+    
+    public void ejercicio22(){
+        int[] vector = new int[10];
+        rellenaVectorInt(vector);
+        int aux = 0;
+        while (aux < 5){
+            System.out.println("Numero: " + vector[aux]);
+            aux++;
+            System.out.println("Numero: " + vector[vector.length-aux]);
+        }
+    }
+    
+    public void ejercicio23(){
+        int[] vector = new int[5];
+        rellenaVectorInt(vector);
+        int acum1 = 0, acum2 = 0, contCeros = 0;
+        int contPos = 0, contNeg = 0;
+        for(int c = 0; c < vector.length; c++){
+            if(vector[c] > 0){
+                acum1 = acum1 + vector[c];
+                contPos++;
+            } else if (vector[c] < 0){
+                acum2 = acum2 + vector[c];
+                contNeg++;
+            } else {
+                contCeros++;
+            }
+        }
+        System.out.println("Media positivos: " + (float)(acum1/contPos));
+        System.out.println("Media negativos: " + (float)(acum2/contNeg));
+        System.out.println("Numero de ceros: " + contCeros);
+    }
+    
+    private void rellenaArrayAleatorio(int[] array, int min, int max){
+        
+        for(int c = 0;)
+        
+    }
+    
 }

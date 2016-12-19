@@ -31,6 +31,15 @@ public class Main {
         
         //a.rombo(13);
         
-        a.ejercicioDavid();
+        //a.ejercicioDavid();
+        
+        //a.ejercicio21();
+        
+        //a.ejercicio22();
+        
+        a.ejercicio23();
+        
+        
+        
     }
 }   
