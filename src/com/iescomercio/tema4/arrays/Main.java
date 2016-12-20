@@ -41,7 +41,7 @@ public class Main {
         
         //a.ejercicio24();
         
-        
+        a.ejercicio25();
         
     }
 }   

@@ -37,7 +37,7 @@ public class Arrays {
 
     private void rellenaArrayAleatorio(int[] array, int min, int max) {
         for (int c = 0; c < array.length; c++) {
-            array[c] = (int) (Math.random() * (max + 1) + min);
+            array[c] = (int) (Math.random() * (max - min) + min);
         }
     }
     
@@ -341,4 +341,48 @@ public class Arrays {
         }
     }
 
+    /*
+    Instanciar dos objetos de la clase action
+        uno del paquete javax.xml.ws
+        otro del paquete javax.swing
+    
+    javax.xml.ws.Action obj1 = new javax.xml.ws.Action();
+    new javax.swing.Action obj2 =new javax.swing.Action();
+    */
+    
+    /*
+    Instancia un objeto de la clase camisa que se encuentra
+    en el paquete tienda.articulos usando import.
+    e instanciar un objeto de la clase cliente sin usar import
+    y que esta en el paquete tienda.usuarios
+    
+    import tienda.articulos.Camisa
+    Camisa c = new Camisa();
+    tienda.usuarios.Cliente cli = new tienda.usuarios.Cliente();
+    */
+    
+    public void ejercicio25(){
+        int c1 = 0, c2 = 0, c3 = 0, i;
+        int[] vector1 = new int[6];
+        int[] vector2 = new int[13];
+        int aux = vector1.length + vector2.length;
+        int[] vector3 = new int[aux];
+        rellenaArrayAleatorio(vector1, 1, 25);
+        rellenaArrayAleatorio(vector2, 1, 25);
+        while (c3 < vector3.length && (c1 < vector1.length || c2 < vector2.length)){
+            for(i = 0; i < 3 && c1 < vector1.length; i++){
+                vector3[c3] = vector1[c1];
+                c3++;
+                c1++;
+            }
+            for(i = 0; i < 3 && c2 < vector2.length; i++){
+                vector3[c3] = vector2[c2];
+                c3++;
+                c2++;
+            }
+        }
+        muestraArrayInt(vector3);
+    }
+    
+    
 }
