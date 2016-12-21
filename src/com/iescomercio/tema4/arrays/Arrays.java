@@ -47,6 +47,25 @@ public class Arrays {
         }
     }
     
+    private int[] combinaArraysDeXEnX(int[] array1, int[] array2, int x){
+        int c1 = 0, c2 = 0, c3 = 0, aux, i;
+        int viAux = array1.length + array2.length;
+        int[] arrayAux = new int[viAux];
+        while (c3 < arrayAux.length && (c1 < array1.length || c2 < array2.length)){
+            for(i = 0; i < 3 && c1 < array1.length; i++){
+                arrayAux[c3] = array1[c1];
+                c3++;
+                c1++;
+            }
+            for(i = 0; i < 3 && c2 < array2.length; i++){
+                arrayAux[c3] = array2[c2];
+                c3++;
+                c2++;
+            }
+        }
+        return arrayAux;
+    }
+    
     /*
     XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     METODOS PUBLIC
@@ -362,25 +381,13 @@ public class Arrays {
     */
     
     public void ejercicio25(){
-        int c1 = 0, c2 = 0, c3 = 0, i;
-        int[] vector1 = new int[6];
-        int[] vector2 = new int[13];
+        int[] vector1 = new int[5];
+        int[] vector2 = new int[7];
         int aux = vector1.length + vector2.length;
         int[] vector3 = new int[aux];
         rellenaArrayAleatorio(vector1, 1, 25);
         rellenaArrayAleatorio(vector2, 1, 25);
-        while (c3 < vector3.length && (c1 < vector1.length || c2 < vector2.length)){
-            for(i = 0; i < 3 && c1 < vector1.length; i++){
-                vector3[c3] = vector1[c1];
-                c3++;
-                c1++;
-            }
-            for(i = 0; i < 3 && c2 < vector2.length; i++){
-                vector3[c3] = vector2[c2];
-                c3++;
-                c2++;
-            }
-        }
+        vector3 = combinaArraysDeXEnX(vector1, vector2, 3);
         muestraArrayInt(vector3);
     }
     
