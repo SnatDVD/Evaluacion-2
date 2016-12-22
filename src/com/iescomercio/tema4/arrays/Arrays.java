@@ -391,5 +391,59 @@ public class Arrays {
         muestraArrayInt(vector3);
     }
     
+    public void ejercicioContinue(){
+        int i = 0;
+        do {
+            i++;
+            if (i == 5){
+                continue;
+            }
+            System.out.println("Numero: " + i);
+        } while (i < 10);
+    }
+    
+    public void ejercicio19(){
+        for (int i = 1; i <= 50; i++){
+            if(i == 5 || i == 10 || i == 15 || i == 25 || i == 30){
+                continue;
+            }
+            System.out.println("Numero: " + i);
+        }
+    }
+    
+    public void ejercicio20(){
+        Scanner sc = new Scanner(System.in);
+        int aux, acum = 0, sumatorio = 0;
+        float media;
+        do {
+            System.out.println("Introduce un numero: ");
+            aux = sc.nextInt();
+            if (aux == -1){
+                break;
+            }
+            acum++;
+            sumatorio = sumatorio + aux;
+            System.out.println("Suma: " + sumatorio);
+            media = (float)(sumatorio/acum);
+            System.out.println("Media: " + media);
+        } while (true);
+        System.out.println("FIN");
+    }
+    
+    public void ejercicio32(){
+        int[][] tabla = new int[4][4];
+        int i, j;
+        for (i = 0; i < 4; i++){
+            rellenaArrayAleatorio(tabla[i], 0, 9);
+        }
+        for (i = 0; i < 4; i++){
+            System.out.println("\n-----------------");
+            for (j = 0; j < 4; j++){
+                System.out.print("| " + tabla[i][j] + " ");
+            }
+            System.out.print("|");
+        }
+        System.out.println("\n-----------------");
+    }
     
 }

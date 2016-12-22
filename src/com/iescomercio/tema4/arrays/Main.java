@@ -41,7 +41,14 @@ public class Main {
         
         //a.ejercicio24();
         
-        a.ejercicio25();
+        //a.ejercicio25();
         
+        //a.ejercicioContinue();
+        
+        //a.ejercicio19();
+        
+        //a.ejercicio20();
+        
+        //a.ejercicio32();
     }
 }   
