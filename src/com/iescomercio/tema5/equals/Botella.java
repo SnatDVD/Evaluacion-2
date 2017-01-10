@@ -7,6 +7,12 @@ public class Botella {
     private float tamano;
     private int capacidad;
 
+    public Botella(String marca, float tamaño, int capacidad){
+        this.marca = marca;
+        this.tamano = tamaño;
+        this.capacidad = capacidad;
+    }
+    
     public String getMarca() {
         return marca;
     }
@@ -16,7 +22,7 @@ public class Botella {
     }
     
     public boolean equals(Botella bot){
-        return ((bot.getMarca().equals(this.marca)) &&(bot.getTamano() == this.tamano));
+        return ((bot.getMarca().equals(this.marca)) && (bot.getTamano() == this.tamano));
     }
     
     
