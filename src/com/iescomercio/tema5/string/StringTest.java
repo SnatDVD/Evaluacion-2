@@ -26,12 +26,10 @@ public class StringTest {
     public void ejercicio5() {
 
         Scanner sc = new Scanner(System.in);
-        String aux;
         String[] listaNumeros = new String[10];
 
         System.out.println("Introduce 10 numeros por teclado separados por comas (sin espacios)");
-        aux = sc.next();
-        listaNumeros = aux.split(",");
+        listaNumeros = sc.next().trim().split(",");
 
         for (int c = 0; c < 10; c++) {
             System.out.println(listaNumeros[c]);
