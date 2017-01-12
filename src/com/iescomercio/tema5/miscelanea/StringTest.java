@@ -1,4 +1,4 @@
-package com.iescomercio.tema5.string;
+package com.iescomercio.tema5.miscelanea;
 
 import java.util.Scanner;
 

@@ -1,5 +1,5 @@
 
-package com.iescomercio.tema5.string;
+package com.iescomercio.tema5.miscelanea;
 
 public class main {
     
