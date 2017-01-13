@@ -28,6 +28,19 @@ public class EjerciciosNavidad {
         } while (num != 0);
     }
 
-    
+    public void losDalton(){
+        Scanner sc = new Scanner(System.in);
+        int num;
+        String aux;
+        String[] alturas, altAux;
+        
+        
+        do{
+            System.out.println("Introduzca el numero de personas en la viñeta. \n(Indroduzca un cero para terminar)");
+            num = sc.nextInt();
+            if(num > )
+        } while (num != 0);
+        
+    }
     
 }
