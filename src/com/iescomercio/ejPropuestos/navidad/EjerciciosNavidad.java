@@ -1,17 +1,33 @@
-
 package com.iescomercio.ejPropuestos.navidad;
 
 import java.util.Scanner;
 
 public class EjerciciosNavidad {
-    
-    public void asaltoAlCastillo(){
+
+    public void asaltoAlCastillo() {
         Scanner sc = new Scanner(System.in);
-        
-        
-        
+        int num, conf = 1;
+
+        do {
+            System.out.println("Intoduce el numero de soldados entre 1 y 500.000.");
+            System.out.println("Para terminar, introduzca un cero.");
+            num = sc.nextInt();
+            if (num > 0 && num < 500001) {
+                for(int c = 1; c <= num/2; c++){
+                    if(num%c == 0){
+                        conf++;
+                    }
+                }
+                System.out.println("Numero de posibles configuraciones: " + conf);
+                conf = 1;
+            } else if (num == 0) {
+                System.out.println("Fin.");
+            } else {
+                System.out.println("Numero no válido");
+            }
+        } while (num != 0);
     }
-    
+
     
     
 }
