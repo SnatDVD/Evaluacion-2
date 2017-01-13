@@ -9,7 +9,7 @@ public class RandomTest {
     private Random ale;
     
     public RandomTest(){
-        Random ale = new Random();
+        ale = new Random();
     }
     
     public void imprimirAleatorio(){
