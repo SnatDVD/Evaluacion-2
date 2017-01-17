@@ -38,7 +38,12 @@ public class EjerciciosNavidad {
         do{
             System.out.println("Introduzca el numero de personas en la viñeta. \n(Indroduzca un cero para terminar)");
             num = sc.nextInt();
-            if(num > )
+            if(num > 0){
+                System.out.println("Introduzca en orden el tamaño de los "
+                + num + "personajes separados por comas. \n(Solo se procesarán los " + num + " primeros)");
+                aux = sc.nextLine();
+                
+            }
         } while (num != 0);
         
     }
