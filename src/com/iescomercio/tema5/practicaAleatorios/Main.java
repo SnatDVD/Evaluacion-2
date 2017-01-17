@@ -6,6 +6,8 @@ public class Main {
         
         Sorteo s = new Sorteo();
         
+        Moneda m = new Moneda();
+        
         //s.listarQuiniela(40, 30, 30);
         
         //s.primitiva();
@@ -14,7 +16,13 @@ public class Main {
         
         //System.out.println(s.terminacionNumFijo(4) + "%");
         
-        System.out.println(s.terminacionNumAleatorio() + "%");
+        //System.out.println(s.terminacionNumAleatorio() + "%");
+        
+        //System.out.println(m.lanzar(10));
+        
+        //m.lanzarConsecutivas(20);
+        
+        m.lanzarCanto();
         
     }
 }
