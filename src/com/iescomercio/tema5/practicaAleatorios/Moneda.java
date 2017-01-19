@@ -48,16 +48,17 @@ public class Moneda {
     }
     
     public void lanzarCanto(){
-        int aux, cont = 0;
+        int aux,aux2, cont = 0;
         boolean conseguido = false;
         
         while(!conseguido){
-            aux = generador.nextInt(21);
+            aux2 = generador.nextInt(1);
+            aux = generador.nextInt(20);
             cont++;
-            if(aux == 20){
+            if(aux == 19){
                 System.out.println("Canto");
                 conseguido = true;
-            } else if(aux < 10){
+            } else if(aux2 == 0){
                 System.out.println("Cara");
             } else{
                 System.out.println("Cruz");
