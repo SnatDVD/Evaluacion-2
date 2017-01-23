@@ -46,6 +46,12 @@ public class Main {
         //System.out.println("Blancas: " + b.getBlancas());
         //System.out.println("Rojas: " + b.getRojas());
         
-        b.sacarTodas();
+        //b.sacarTodas();
+        
+        BolsaArrayList bol = new BolsaArrayList(1, 3);
+        
+        bol.sacarTodas();
+        bol.reiniciarBolsa();
+        bol.sacarTodas();
     }
 }

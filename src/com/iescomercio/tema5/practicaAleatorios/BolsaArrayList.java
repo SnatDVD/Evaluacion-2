@@ -6,44 +6,68 @@ import java.util.Random;
 
 public class BolsaArrayList {
     
-    private int numBlancas;
-    private int numRojas;
     private Random generador;
     private ArrayList<String> bolas;
+    private ArrayList<String> estadoInicial;
     
     public BolsaArrayList(int rojas, int blancas){
         generador = new Random();
-        numBlancas = blancas;
-        numRojas = rojas;
         bolas = new ArrayList<>();
-        for(int c = 0; c < (numBlancas + numRojas); c++){
-            if(c < numBlancas){
+        estadoInicial = new ArrayList<>();
+        for(int c = 0; c < (blancas + rojas); c++){
+            if(c < blancas){
                 bolas.add("Blanca");
+                estadoInicial.add("Blanca");
             } else{
                 bolas.add("Roja");
+                estadoInicial.add("Roja");
             }
         }
     }
 
     public int getBlancas() {
-        return numBlancas;
+        int cont = 0;
+        for(String c:bolas){
+            if (c.equals("Blanca")){
+                cont++;
+            }
+        }
+        return cont;
     }
 
     public int getRojas() {
-        return numRojas;
+        int cont = 0;
+        for(String c:bolas){
+            if (c.equals("Roja")){
+                cont++;
+            }
+        }
+        return cont;
     }
     
     public String sacarBola(){
         int aux;
         String resultado;
         
-        
         aux = generador.nextInt(bolas.size());
-        
-        
-        
+        resultado = bolas.get(aux);
+        bolas.remove(aux);
+        return resultado;
     }
     
+    public void sacarTodas(){
+        int tam = bolas.size();
+        
+        for(int c = 0; c < tam; c++){
+            System.out.println(sacarBola());
+        }
+    }
     
+    public void reiniciarBolsa(){
+        bolas.clear();
+        for(String c:estadoInicial){
+            bolas.add(c);
+        }
+    }
     
 }
