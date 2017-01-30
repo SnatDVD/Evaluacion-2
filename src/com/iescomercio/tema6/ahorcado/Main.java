@@ -7,21 +7,18 @@ public class Main {
         Horca h = new Horca();
         
         h.mostrar();
-        
         h.ponTrozo();
-        
         h.mostrar();
-        
         h.ponTrozo();
-        
         h.mostrar();
-        
         h.ponTrozo();
-        
         h.mostrar();
-        
         h.ponTrozo();
         h.ponTrozo();
         h.mostrar();
+        System.out.println(h.estaVivo());
+        h.ponTrozo();
+        h.mostrar();
+        System.out.println(h.estaVivo());
     }
 }
