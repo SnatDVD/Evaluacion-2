@@ -7,7 +7,7 @@ public class Main {
         
         Compartida c = new Compartida();
         Compartida m = new Compartida();
-        
+        /*
         c.aumentar();
         c.mostrar();
         c.aumentar();
@@ -17,6 +17,8 @@ public class Main {
         m.aumentar();
         c.aumentar();
         m.mostrar();
+        */
+        System.out.println("|     /|\\");
     }
     
 }
