@@ -11,6 +11,10 @@ public class Lector {
         letra = ' ';
     }
     
+    private void setLetra(char letra){
+        this.letra = letra;
+    }
+    
     public char getLetra(){
         return letra;
     }
@@ -27,7 +31,7 @@ public class Lector {
             aux = aux.toUpperCase();
             caracter = aux.charAt(0);
         }while(caracter < 'A' || caracter > 'Z');
-        letra = caracter;
+        setLetra(caracter);
     }
     
 }

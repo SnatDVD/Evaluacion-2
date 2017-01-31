@@ -6,6 +6,7 @@ public class Main {
         
         Horca h = new Horca();
         
+        /*
         h.mostrar();
         h.ponTrozo();
         h.mostrar();
@@ -20,5 +21,11 @@ public class Main {
         h.ponTrozo();
         h.mostrar();
         System.out.println(h.estaVivo());
+        */
+        
+        Lector l = new Lector();
+        
+        l.pedirLetra();
+        System.out.println(l.getLetra());
     }
 }
