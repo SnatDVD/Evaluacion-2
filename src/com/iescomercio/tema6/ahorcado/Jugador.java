@@ -17,6 +17,10 @@ public class Jugador {
         this.nombre = nombre;
     }
     
+    public String getNombre(){
+        return nombre;
+    }
+    
     public void pedirNombre(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce tu nombre.");

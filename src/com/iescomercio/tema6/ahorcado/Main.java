@@ -4,28 +4,8 @@ package com.iescomercio.tema6.ahorcado;
 public class Main {
     public static void main(String[] args) {
         
-        Horca h = new Horca();
+        Ahorcado a = new Ahorcado();
         
-        /*
-        h.mostrar();
-        h.ponTrozo();
-        h.mostrar();
-        h.ponTrozo();
-        h.mostrar();
-        h.ponTrozo();
-        h.mostrar();
-        h.ponTrozo();
-        h.ponTrozo();
-        h.mostrar();
-        System.out.println(h.estaVivo());
-        h.ponTrozo();
-        h.mostrar();
-        System.out.println(h.estaVivo());
-        */
-        
-        Lector l = new Lector();
-        
-        l.pedirLetra();
-        System.out.println(l.getLetra());
+        a.play();
     }
 }
