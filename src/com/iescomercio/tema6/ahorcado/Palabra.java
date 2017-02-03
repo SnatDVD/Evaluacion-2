@@ -7,25 +7,15 @@ public class Palabra {
     private StringBuilder oculta;
     
     public Palabra(){
-        int tam;
-        
-        palabra = "AHORCADO";
+        setPalabra("AHORCADO");
         oculta = new StringBuilder();
-        tam = getPalabra().length();
-        for(int c = 0; c < tam; c++){
-            oculta = oculta.append('-');
-        }
+        rellenaGuiones();
     }
     
     public Palabra(String palabra){
-        int tam;
-        
-        this.palabra = palabra;
+        setPalabra(palabra);
         oculta = new StringBuilder();
-        tam = getPalabra().length();
-        for(int c = 0; c < tam; c++){
-            oculta = oculta.append('-');
-        }
+        rellenaGuiones();
     }
     
     private String getPalabra(){
@@ -36,21 +26,44 @@ public class Palabra {
         return oculta;
     }
     
+    private void setPalabra(String palabra){
+        this.palabra = palabra;
+    }
+    
+    private void setOculta(StringBuilder nuevaOculta){
+        oculta = nuevaOculta;
+    }
+    
+    private void rellenaGuiones(){
+        int tam = getPalabra().length();
+        StringBuilder aux = new StringBuilder();
+        for(int c = 0; c < tam; c++){
+            aux = aux.append('-');
+        }
+        setOculta(aux);
+    }
+    
+    private void desvelaLetra(char letra){
+        int tam = getPalabra().length();
+        
+        for(int c = 0; c < tam; c++){
+            if(letra == getPalabra().charAt(c)){
+                getOculta().setCharAt(c, letra);
+            }
+        }
+    }
+    
     public void mostrar(){
         System.out.println(getOculta().toString());
     }
     
     public boolean compruebaLetra(char letra){
-        int tam = getPalabra().length();
-        boolean esta = false;
-        
-        for(int c = 0; c < tam; c++){
-            if(letra == getPalabra().charAt(c)){
-                getOculta().setCharAt(c, letra);
-                esta = true;
-            }
+        if(getPalabra().contains(letra + "")){
+            desvelaLetra(letra);
+            return true;
+        } else {
+            return false;
         }
-        return esta;
     }
     
     public boolean incompleta(){

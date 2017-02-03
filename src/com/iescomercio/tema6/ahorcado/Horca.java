@@ -4,9 +4,16 @@ package com.iescomercio.tema6.ahorcado;
 public class Horca {
     
     private int partes;
+    private int maximo;
     
     public Horca(){
-        partes = 0;
+        setPartes(0);
+        setMaximo(6);
+    }
+    
+    public Horca(int max){
+        setPartes(0);
+        setMaximo(max);
     }
     
     private int getPartes(){
@@ -15,6 +22,14 @@ public class Horca {
     
     private void setPartes(int partes){
         this.partes = partes;
+    }
+    
+    private int getMaximo(){
+        return maximo;
+    }
+    
+    private void setMaximo(int max){
+        maximo = max;
     }
     
     private void muestraVacia(){
@@ -94,6 +109,17 @@ public class Horca {
         System.out.println("|_______________");
     }
     
+    private void muestraSombrero(){
+        System.out.println("________");
+        System.out.println("|      |");
+        System.out.println("|      Ô");
+        System.out.println("|     /|\\");
+        System.out.println("|     / \\");
+        System.out.println("|");
+        System.out.println("|");
+        System.out.println("|_______________");
+    }
+    
     public void mostrar(){
         
         switch(getPartes()){
@@ -125,11 +151,19 @@ public class Horca {
                 muestraPierna2();
                 break;
             }
+            case 7:{
+                muestraSombrero();
+                break;
+            }
+            default:{
+                System.out.println("No hay dibujo, pero llevas " + getPartes());
+                break;
+            }
         }
     }
     
     public boolean estaVivo(){
-        return (getPartes() != 6);
+        return (getPartes() != getMaximo());
     }
     
     public void ponTrozo(){

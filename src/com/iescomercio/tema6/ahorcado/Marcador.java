@@ -1,11 +1,11 @@
 
 package com.iescomercio.tema6.ahorcado;
 
-public class Fallos {
+public class Marcador {
     
     private StringBuilder letras;
     
-    public Fallos(){
+    public Marcador(){
         letras = new StringBuilder();
     }
     
@@ -28,7 +28,7 @@ public class Fallos {
     }
     
     public void mostrar(){
-        System.out.println("Fallos: " + getLetras().toString());
+        System.out.println(getLetras().toString());
     }
     
     public void anadeLetra(char letra){
