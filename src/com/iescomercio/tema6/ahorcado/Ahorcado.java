@@ -9,7 +9,7 @@ public class Ahorcado {
         System.out.println("Bienvenido al juego del ahorcado.");
     }
     
-    private int pideFallos(){
+    private int pideFallosMax(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce el numero de fallos que quieras para el juego");
         return sc.nextInt();
@@ -20,7 +20,7 @@ public class Ahorcado {
         Jugador j = new Jugador();
         Marcador f =  new Marcador();
         Marcador a =  new Marcador();
-        Horca h = new Horca(pideFallos());
+        Horca h = new Horca(pideFallosMax());
         Lector l = new Lector();
         Diccionario d = new Diccionario();
         Palabra p = new Palabra(d.getPalabraAleatoria());
