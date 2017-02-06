@@ -4,8 +4,8 @@ package com.iescomercio.tema6.ahorcado;
 public class Main {
     public static void main(String[] args) {
         
-        Ahorcado a = new Ahorcado();
+        Partida p = new Partida(4,6);
         
-        a.play();
+        p.jugar();
     }
 }
