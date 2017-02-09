@@ -1,11 +1,12 @@
 
-package com.iescomercio.tema6.ahorcado;
+package com.iescomercio.tema6.zeldaBien;
 
 public class Main {
+    
     public static void main(String[] args) {
         
-        Partida p = new Partida(2,6);
+        Juego j = new Juego();
         
-        p.jugar();
+        j.juego();
     }
 }

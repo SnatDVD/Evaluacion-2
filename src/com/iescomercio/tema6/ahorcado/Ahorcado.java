@@ -51,6 +51,7 @@ public class Ahorcado {
                 acierta = true;
                 if(this.haGanado()){
                     System.out.println("Enhorabuena " + j.getNombre() + ". Has ganado!!");
+                    break;
                 }
             }
             System.out.println("======================================");
@@ -66,7 +67,7 @@ public class Ahorcado {
     }
     
     public boolean haGanado(){
-        return !p.incompleta();
+        return (!p.incompleta());
     }
     
     public void play(){
