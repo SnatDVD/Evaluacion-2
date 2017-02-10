@@ -36,15 +36,26 @@ public class Juego
     private void crearHabitaciones()
     {
         Habitacion recibidor, salaTrono, salaTesoro, alaEste, alaOeste, salonPrincesa, mazmorrasEste, mazmorrasOeste;
+        Elemento llave, cofre, princesa, monstruo, trono, flor, ocarina;
       
+        //Crear elementos
+        
+        llave = new Elemento("Llave", 2);
+        cofre = new Elemento("Cofre", 20);
+        princesa = new Elemento("Princesa Zelda", 15);
+        monstruo = new Elemento("Monstruo", 30);
+        trono = new Elemento("Trono", 25);
+        flor = new Elemento("Flor", 1);
+        ocarina = new Elemento("Ocarina", 5);
+        
         // Crear las habitaciones
         recibidor = new Habitacion("Entrada principal del Castillo de Hyrule");
-        salaTrono = new Habitacion("Salon del trono");
-        salaTesoro = new Habitacion("Sala del tesoro");
-        alaEste = new Habitacion("Ala este");
-        alaOeste = new Habitacion("Ala oeste");
-        salonPrincesa = new Habitacion("Salon de la princesa");
-        mazmorrasEste = new Habitacion("Mazmorra este");
+        salaTrono = new Habitacion("Salon del trono", trono);
+        salaTesoro = new Habitacion("Sala del tesoro", cofre);
+        alaEste = new Habitacion("Ala este", flor);
+        alaOeste = new Habitacion("Ala oeste", ocarina);
+        salonPrincesa = new Habitacion("Salon de la princesa", princesa);
+        mazmorrasEste = new Habitacion("Mazmorra este", monstruo);
         mazmorrasOeste = new Habitacion("Mazmorra oeste");
         
         // Crear las salidas
@@ -129,7 +140,7 @@ public class Juego
         else if (commandWord.equals("fin"))
             finJuego = fin(command);
         else if (commandWord.equals("ver"))
-            habitacionActual.getDescripcionLarga();
+            System.out.println(habitacionActual.getDescripcionElemento());
             
         return finJuego;
     }

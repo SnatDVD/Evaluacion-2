@@ -22,6 +22,7 @@ public class Habitacion
 {
     private String descripcion;
             
+    private Elemento elemento;
     private Habitacion salidaNorte;
     private Habitacion salidaSur;
     private Habitacion salidaEste;
@@ -38,6 +39,25 @@ public class Habitacion
     public Habitacion(String descripcion) 
     {
         this.descripcion = descripcion;
+        elemento = null;
+        salidaNorte = null;
+        salidaSur = null;
+        salidaEste = null;
+        salidaOeste = null;
+        salidaArriba = null;
+        salidaAbajo = null;
+    }
+    
+    public Habitacion(String descripcion, Elemento elemento) 
+    {
+        this.descripcion = descripcion;
+        this.elemento = elemento;
+        salidaNorte = null;
+        salidaSur = null;
+        salidaEste = null;
+        salidaOeste = null;
+        salidaArriba = null;
+        salidaAbajo = null;
     }
     
     /**
@@ -67,6 +87,21 @@ public class Habitacion
     public String getDescripcion()
     {
         return descripcion;
+    }
+    
+    private Elemento getElemento(){
+        if(elemento == null){
+            return null;
+        } else{
+            return elemento;
+        }
+    }
+    
+    public String getDescripcionElemento(){
+        if(getElemento() != null)
+            return "En la habitacion hay " + getElemento().getDescripcion();
+        else
+            return "No hay ningun elemento";
     }
 
     /**

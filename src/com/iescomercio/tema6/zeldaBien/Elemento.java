@@ -15,4 +15,8 @@ public class Elemento {
         }
     }
     
+    public String getDescripcion(){
+        return descripcion;
+    }
+    
 }
