@@ -81,10 +81,14 @@ public class Numero {
         int tam = cifras.size();
         double sum = 0;
         
-        for(int c = 0; c < tam; c++){
-            sum = sum + Math.pow(cifras.get(c),tam);
+        if(numero > 0){
+            for(int c = 0; c < tam; c++){
+                sum = sum + Math.pow(cifras.get(c),tam);
+            }
+            return sum == numero;
+        } else{
+            return false;
         }
-        return sum == numero;
     }
     
     public static void listarNarcisistas(int numCifras){
@@ -102,6 +106,29 @@ public class Numero {
         System.out.println("\nTotal de numeros: " + cont);
     }
     
+    public String pasarARomano(){
+        int aux = getValor();
+        
+        if(aux > 0 && aux < 4001){
+            int[] valores = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+            String[] letras = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+            int cont = 0;
+            String resultado = "";
+            
+            while(aux != 0){
+                while((aux / valores[cont]) > 0){
+                    resultado = resultado + letras[cont];
+                    aux = aux - valores[cont];
+                }
+                cont++;
+            }
+            return resultado;
+        } else{
+            System.out.println("Numero no valido. Debe ser entre 1 y 4000");
+            return "";
+        }
+        
+    }
     
     
 }

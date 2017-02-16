@@ -4,7 +4,7 @@ package com.iescomercio.tema5.numeroYCadena;
 public class Main {
     public static void main(String[] args) {
         
-        Numero n = new Numero(220);
+        Numero n = new Numero(2914);
         Numero n2 = new Numero(284);
         
         
@@ -14,7 +14,9 @@ public class Main {
         
         //System.out.println(Numero.esNarcisista(13));
         
-        Numero.listarNarcisistas(7);
+        //Numero.listarNarcisistas(3);
+        
+        System.out.println(n.pasarARomano());
         
     }
 }
