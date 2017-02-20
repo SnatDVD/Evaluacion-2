@@ -16,7 +16,11 @@ public class Main {
         
         //Numero.listarNarcisistas(3);
         
-        System.out.println(n.pasarARomano());
+        //System.out.println(n.pasarARomano());
+        
+        Cadena c = new Cadena("MCMxCII");
+        
+        System.out.println(c.pasarADecimal());
         
     }
 }
