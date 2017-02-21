@@ -18,9 +18,19 @@ public class Main {
         
         //System.out.println(n.pasarARomano());
         
-        Cadena c = new Cadena("MCMxCII");
+        Cadena c = new Cadena("Hoy es Navidad");
         
-        System.out.println(c.pasarADecimal());
+        String hola = "hola";
+        
+        Cadena.quitarLetraEnPosicion(hola, 0);
+        
+        System.out.println(hola);
+        
+        System.out.println(c.quitarLetras("aeiou"));
+        
+        //System.out.println(c.pasarADecimal());
+        
+        
         
     }
 }

@@ -92,4 +92,39 @@ public class Cadena {
         return resultado;
     }
     
+    public static boolean quitarLetraEnPosicion(String mensaje,int posicion){
+        int tam = mensaje.length();
+        if(posicion < 0 || posicion >= tam){
+            return false;
+        } else{
+            StringBuilder mens = new StringBuilder(mensaje);
+            
+            mens = mens.deleteCharAt(posicion);
+            mensaje = mens.toString();
+            return true;
+        }
+    }
+    
+    public String quitarLetras(String letras){
+        int tam = letras.length();
+        int tam2 = cadena.length();
+        
+        if(tam > 0 && tam2 > 0){
+            String aux = cadena;
+            
+            for(int c = 0; c < tam; c++){
+                for(int b = 0; b < tam2; b++){
+                    if(aux.charAt(b) == letras.charAt(c)){
+                        quitarLetraEnPosicion(aux, b);
+                    }
+                }
+            }
+            return aux;
+        } else{
+            return cadena;
+        }
+        
+        
+    }
+    
 }
